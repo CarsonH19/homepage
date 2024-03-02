@@ -20,7 +20,7 @@ a {
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #18181B;
+  background-color: #131319;
 }
 
 nav {
@@ -120,7 +120,7 @@ header .content h1 span {
   -webkit-text-stroke: 1px #fff;
 }
 
-header content p {
+header .content p {
   margin-bottom: 2rem;
   color: #ccc;
 }
@@ -134,4 +134,5 @@ header .image img {
   margin: auto;
   border: #1d4ed8 8px solid;
   border-radius: 500px;
+
 }
