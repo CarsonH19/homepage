@@ -36,7 +36,7 @@ nav {
   padding: 2rem 1rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   gap: 2rem;
 }
 
@@ -147,7 +147,10 @@ header .image img {
 section .header {
   margin-bottom: 1rem;
   color: #fff;
+  text-align: center;
+  font-size: 2.25rem;
   font-weight: 600;
+
 }
 
 .features {
@@ -165,8 +168,8 @@ section .header {
   transition: all 0.3s ease;
 }
 
-.feature .card:hover {
-  background-color: #27272a;
+.features .card:hover {
+  background-color: #323232;
   border-color: #fff;
 }
 
@@ -219,7 +222,7 @@ section .header {
 
 .pricing .card {
   padding: 3rem 2rem;
-  background-color: #27272a;
+  background-color: #232328;
   display: flex;
   flex-direction: column;
   border: 2px solid transparent;
@@ -340,4 +343,41 @@ footer .column > a:hover {
   color: #fff;
   font-size: 0.8rem;
   text-align: center;
+}
+
+/* RESPONSIVE CODES */
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
+  .header {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .header .image {
+    grid-area: 1/1/2/2;
+  }
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .pricing {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  footer {
+    grid-template-columns: 1fr 200px;
+  }
+}
+
+@media (max-width: 600px) {
+  header .image::before {
+    display: none;
+  }
+  .features {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .pricing {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  footer {
+    grid-template-columns: 1fr 150px;
+  }
 }
